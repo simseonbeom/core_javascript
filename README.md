@@ -18,13 +18,13 @@
 ---
 
 ## Operations
-- [x] Operations (기본 연산자) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/08-1.operations.js)
-- [x] Operations (비교 연산자) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/08-2.operations.js)
+- [x] Operations (기본 연산자) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/08-1.operation.js)
+- [x] Operations (비교 연산자) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/08-2.operation.js)
 
 
 ---
 ## Condition
-- [ ] condition (if조건문) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-1.condition.js)
-- [ ] condition (논리연산자) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-2.condition.js)
-- [ ] condition (switch..case) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-3.condition.js)
-- [ ] condition (nullish) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-4.condition.js)
+- [ ] Condition (if조건문) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-1.condition.js)
+- [ ] Condition (논리연산자) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-2.condition.js)
+- [ ] Condition (switch..case) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-3.condition.js)
+- [ ] Condition (nullish) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-4.condition.js)
