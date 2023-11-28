@@ -52,12 +52,14 @@ let movieMessage = didWatchMovie.includes("yes")
 // 멀티 조건부 연산자 식
 
 
+
 function render(node,isActive){
   
   let template = `
     <div>${ isActive ?  '안녕' : '잘가' }</div>
   `
-
+  console.log( template );
+  
   node.insertAdjacentHTML('beforeend',template)
   
 }
