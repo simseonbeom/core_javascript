@@ -24,7 +24,16 @@
 
 ---
 ## Condition
-- [ ] Condition (if조건문) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-1.condition.js)
-- [ ] Condition (논리연산자) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-2.condition.js)
-- [ ] Condition (switch..case) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-3.condition.js)
-- [ ] Condition (nullish) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-4.condition.js)
+- [x] Condition (if조건문) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-1.conditions.js)
+- [x] Condition (논리연산자) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-2.conditions.js)
+- [x] Condition (switch..case) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-3.conditions.js)
+- [x] Condition (nullish) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-4.conditions.js)
+
+
+---
+## Loop
+- [x] loop (while) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-1.loop.js)
+- [ ] loop (do..while) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-2.loop.js)
+- [ ] loop (for) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-3.loop.js)
+- [ ] loop (for...in) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-4.loop.js)
+- [ ] loop (for...of) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/09-5.loop.js)
