@@ -49,9 +49,29 @@ while( i < frontEndDev.length){
 
   let value = frontEndDev[i];
   
-  console.log(value);
+  // console.log(value);
 
   i++;
+}
+
+
+
+
+
+// while 문 (역순환 : 역방향)
+
+// 값이 감소 
+
+
+let l = frontEndDev.length - 1;
+
+while(l >= 0){
+  
+  let value = frontEndDev[l];
+
+  console.log( value );
+
+  l--
 }
 
 
@@ -61,8 +81,6 @@ while( i < frontEndDev.length){
 
 
 
-
-// while 문 (역순환 : 역방향)
 
 // 성능 진단 : 순환 vs. 역순환
 
