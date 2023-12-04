@@ -195,16 +195,8 @@ function movePage(url,success,fail){
 
 movePage(
   'https:www.naver.com',
-
-  function(url){
-    console.log(url);
-  },
-
-  function(err){
-
-
-    console.log( err);
-  }
+  url => console.log(url),
+  err => console.log( err)
 )
 
 
