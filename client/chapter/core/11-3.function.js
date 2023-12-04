@@ -134,10 +134,76 @@ console.log(result2);
 /* 다음 함수를 작성해봅니다. -------------------------------------------------- */
 
 // pow(numeric: number, powerCount: number): number;
-let pow; 
+let pow = (numeric,powerCount)=>{
+
+  let result = 1;
+
+  for(let i = 0; i < powerCount; i++){
+    result *= numeric;
+  }
+
+  return result;
+}; 
+
+
+
+// let powExpression = (numeric,powerCount)=>{
+
+//   return Array(powerCount).fill(null).reduce((acc)=>{
+//     return acc * numeric
+//   },1)
+
+// }
+
+
+
+let powExpression = (numeric,powerCount) => Array(powerCount).fill(null).reduce(acc =>  acc * numeric ,1) 
+
+
+powExpression(2,53) // 901...
+
+// console.log( pow(2,53) );
+
 
 // repeat(text: string, repeatCount: number): string;
-let repeat; 
+
+// for문 
+// 값 누적
+
+let repeat = (text,repeatCount)=>{
+  let result = '';
+  for(let i = 0; i < repeatCount; i++){
+    result += text;
+  }
+  return result;
+}; 
+
+
+
+
+
+repeat('hello😘',3)  // 'hello😘hello😘hello😘'
+
+
+let repeatExpression = (text,repeatCount)=> Array(repeatCount).fill(null).reduce(acc =>  acc + text ,'') 
+
+
+
+console.log( repeatExpression('hi🥹',30) );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
