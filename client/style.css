@@ -5,3 +5,8 @@ body {
   height: 100vh;
   text-align: center;
 }
+
+
+span{
+  display: inline-block;
+}
