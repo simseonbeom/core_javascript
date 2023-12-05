@@ -44,11 +44,25 @@
 - [x] function (함수선언문) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/11-1.function.js)
 - [x] function (함수표현식) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/11-2.function.js)
 - [x] function (화살표함수) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/11-3.function.js)
-- [ ] function (재귀함수) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/11-4.function.js)
+- [x] function (재귀함수) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/11-4.function.js)
 
 
 
+## Object
+- [x] object (객체) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/12-1.object.js)
+- [ ] object (copy by reference) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/12-2.object.js)
+- [ ] object (garbage collection) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/12-3.object.js)
+- [ ] object (method and this) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/12-4.object.js)
+
+---
+## Prototype
+- [ ] prototype (프로토타입의 상속) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/13.prototype.js)
+- [ ] prototype (클래스) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/13.classes.js)
 
 
+---
+## Closure
+- [ ] Closure (클로저) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/14-1.closure.js)
+- [ ] Closure (시나리오) [바로가기](https://github.com/simseonbeom/core_javascript/blob/01.core/client/chapter/core/14-2.closure.js)
 
 
