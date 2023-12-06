@@ -221,6 +221,7 @@ const arr = [10,100,1000,10000];
 // const a4 = arr[4];
 
 
+// const [a1,...d] = [10,100,1000,10000];
 const [a1,...d] = arr;
 
 // console.log(d);
@@ -270,7 +271,7 @@ const salaries = {
   박수양: 6,
   장효진: 33,
 }
- 
+
 // console.log( salaries.김지수 );
 
 // const {김지수,이정현,박수양,장효진} = salaries;
@@ -278,7 +279,7 @@ const salaries = {
 const {김지수:kim,이정현:lee,박수양:park,장효진:jang,이경화 = '500'} = salaries;
 
 
-console.log(이경화);
+console.log(이경화); // '500'
 
 
 function createUserData(obj){
