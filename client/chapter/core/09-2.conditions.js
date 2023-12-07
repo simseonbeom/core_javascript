@@ -75,11 +75,11 @@ function login(){
   // 취소 버튼과 ESC 누르면 null 이뜸.
   // 어떤 값도 입력하지 않았을 경우 => 빈문자 '' 
   
-  if(userName.toLowerCase() === 'admin'){
+  if(userName?.toLowerCase() === 'admin'){
     
     let password = prompt('비밀번호는?');
   
-    if(password.toLowerCase() === 'themaster'){
+    if(password?.toLowerCase() === 'themaster'){
       console.log('로그인 성공 환영합니다!');
   
     }else{
