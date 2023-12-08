@@ -3,6 +3,8 @@
 /* -------------------------- */
 
 
+
+
 const portableFan = {
   maker: 'fromB',
   brand: 'FD221',
@@ -73,6 +75,35 @@ clearTimeout(timer)
 // console.log(5);
 
 
+// let count = 0;
+// const id = setInterval(()=>{
+
+//   console.log(++count);
+//   document.querySelector('.first').style.transform = `translateY(${++count}px) rotate(${++count}deg)`
+
+
+//   if(count >= 300){
+//     clearInterval(id)
+//   }
+
+// },10);
+
+
+let count = 0;
+
+function animation(){
+  
+  console.log( ++count );
+
+  const id = requestAnimationFrame(animation)
+  
+  if(count >= 100){
+    cancelAnimationFrame(id)
+  }
+}
+
+
+animation()
 
 
 
