@@ -211,17 +211,21 @@ console.log(사장님빼고모여);
 /* 요소별 리듀서(reducer) 실행 -------------- */
 
 // reduce
-const totalAge = people.reduce((acc,cur)=>{
-
-  return acc + cur.age
-  // return acc + cur.age
-
-},0)
+const totalAge = people.reduce((acc,cur)=>acc + cur.age,0)
 
 
 
+// const template = people.reduce((htmlCode,cur)=> htmlCode + `<div>${cur.name} : ${cur.age} 살</div>` ,'')
+const template = people.reduce((htmlCode,cur)=> {
+  return htmlCode + `<div>${cur.name} : ${cur.age} 살</div>`
+},'')
 
-console.log( totalAge );
+
+console.log( template );
+
+document.body.insertAdjacentHTML('beforeend',template);
+
+
 
 // reduceRight
 
@@ -229,6 +233,35 @@ console.log( totalAge );
 
 // split
 // join
+
+
+const str = '종명 예진 현주 지인 훈 은원';
+
+
+// split : 문자 → 배열
+const stringToArray = str.split(' ');
+console.log( stringToArray );
+
+
+
+// join : 배열 → 문자
+const arrayToString = stringToArray.join('-');
+console.log( arrayToString );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
