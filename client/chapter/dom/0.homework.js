@@ -4,6 +4,7 @@
 // querySelector
 const button = document.querySelector('.menu-button');
 const menu = document.querySelector('.menu');
+const input = document.querySelector('#todo');
 
 // console.log( button );
 
@@ -53,6 +54,15 @@ function handleMenu(e){
 button.addEventListener('click',handleMenu)
 
 
+function handleInput(){
+  console.log();
+
+  if(this.value === 'hello'){
+    console.log('success');
+  }
+}
+
+input.addEventListener('input',handleInput)
 
 
 // Node.addEvent...
