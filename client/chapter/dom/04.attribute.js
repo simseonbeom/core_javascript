@@ -27,10 +27,10 @@
 const first = document.querySelector('.first');
 
 // - elementNode.hasAttribute(name) – 속성 존재 여부 확인
-console.log( first.hasAttribute('id') );
+// console.log( first.hasAttribute('id') );
 
 // - elementNode.getAttribute(name) – 속성값을 가져옴
-console.log( first.getAttribute('sayHi') );
+// console.log( first.getAttribute('sayHi') );
 
 
 // - elementNode.setAttribute(name, value) – 속성값을 변경함
@@ -41,10 +41,10 @@ first.setAttribute('data-index','1');
 first.removeAttribute('id')
 
 // - elementNode.attributes – 열거 가능한(iterable) 속성 집합을 반환함
-console.log( first.attributes );
+// console.log( first.attributes );
 
 for(let value of first.attributes){
-  console.dir(value);
+  // console.dir(value);
 }
 
 /* 비표준 속성, 프로퍼티 설정 ------------------------------------------------- */
@@ -56,8 +56,8 @@ for(let value of first.attributes){
 // - elementNode.dataset
 
 first.dataset.name = 'tiger' // setter
-console.log( first.dataset.name ); // getter
-console.log( first.getAttribute('data-name') );
+// console.log( first.dataset.name ); // getter
+// console.log( first.getAttribute('data-name') );
 
 
 first.dataset.animation = 'paused'
@@ -66,76 +66,6 @@ first.dataset.animation = 'paused'
 // if(first.dataset.animation === 'play'){
 
 // }
-
-
-
-
-
-
-function getAttr(node,prop){
-
-  // let node = '.first';
-  // let prop = 'class';
-
-  // first // document.querySelector(node)
-
-  if(typeof node === 'string') node = getNode(node)
-  if(typeof prop !== 'string') throw new TypeError('getAttr 함수의 두 번째 인수는 문자 타입 이어야 합니다.');
-  
-  return node.getAttribute(prop)
-
-}
-
-getAttr(first,'class')
-
-
-
-// console.log( getAttr('.first','class') );  // "first"
-
-
-function setAttr(node,prop,value){
-
-  
-  if(typeof node === 'string') node = getNode(node);
-  if(typeof prop !== 'string' || typeof value !== 'string') throw new TypeError('setAttr함수의 두 번째 인수는 문자 타입 이어야 합니다.');
-  if(!value) throw new Error('setAttr함수의 세 번째 인수는 필수 입력값 입니다.')
-
-  // node.dataset.name = 'kindtiger'
-    
-  if(prop.startsWith('data')){
-    
-    
-    node.dataset[prop] = value;
-
-  }
-  
-
-  node.setAttribute(prop,value)
-}
-
-
-
-setAttr('.first','data-name','kindtiger');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
