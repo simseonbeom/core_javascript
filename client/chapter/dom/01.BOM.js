@@ -109,31 +109,42 @@ const arr = [1,2,3,4,5];
 
 
 
-try{
-  try{
-    try{
-      try{
-        throw new Error()
-      }catch{
-        console.log('errrrerrrrrr');
-      }
-      throw new Error()
-    }catch{
-      console.log('errrrr');
-    }
-    throw new Error()
-  }catch{
-    console.log('err@!');
-  }
-  throw new Error()
-}catch{
-  console.log('err!');
+// try{
+//   try{
+//     try{
+//       try{
+//         throw new Error()
+//       }catch{
+//         console.log('errrrerrrrrr');
+//       }
+//       throw new Error()
+//     }catch{
+//       console.log('errrrr');
+//     }
+//     throw new Error()
+//   }catch{
+//     console.log('err@!');
+//   }
+//   throw new Error()
+// }catch{
+//   console.log('err!');
+// }
+
+
+
+function fibonacci(n){
+  if(n <= 0) return 0;
+  if(n <= 2) return 1;
+  return fibonacci(n-1) + fibonacci(n-2);
 }
 
 
+console.log(fibonacci(45))
 
 
-
+setTimeout(() => {
+  console.log('안녕! 친구들!');
+}, 2000);
 
 
 

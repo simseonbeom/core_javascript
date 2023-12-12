@@ -10,7 +10,8 @@
 
   <script src="./lib/utils/typeOf.js"></script>
   <!-- <script src="./chapter/core/21.tryCatch.js" defer></script> -->
-  <script src="./chapter/dom/01.BOM.js" defer></script>
+  <script src="./lib/dom/getNode.js"></script>
+  <script src="./chapter/dom/04.attribute.js" defer></script>
   
 
 </head>
@@ -19,7 +20,7 @@
 
   <!-- <video autoplay id="videoElement"></video> -->
   <h1>
-    <span class="first">hello</span>
+    <span class="first" sayHi="hello">hello</span>
     
     <!-- 주석 -->
     <span class="second">javascript</span>
@@ -27,9 +28,11 @@
 
     <span class="third">javascript</span>
 
+    <button>outer button</button>
+
     <hr />
 
-    <div>
+    <div class="container">
       <label for="todo">할일</label>
       <input type="text" id="todo" />
       <button class="register">등록</button>
@@ -40,6 +43,8 @@
       </ul>
     </div>
 
+
+    
     
 
   </h1>
