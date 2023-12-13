@@ -11,7 +11,7 @@
 
 
 1. JavaScrirpt Core Brach [바로가기](https://github.com/simseonbeom/core_javascript/tree/01.core)
-2. JavaScrirpt Dom Brach [바로가기](https://www.naver.com)
+2. JavaScrirpt Dom Brach [바로가기](https://github.com/simseonbeom/core_javascript/tree/02.dom)
 
 
 
