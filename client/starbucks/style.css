@@ -57,13 +57,45 @@ a{
 
 
 #header{
-  box-shadow: 2px 2px 2px 2px #000;
+  box-shadow: 2px 2px 5px 3px #0000002e;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+
+	.logo{
+		font-size: 2rem;
+		padding: 1rem;
+	}
 }
 
 
 
 
+nav > ul{
+	display: flex;
 
+	& li{
+		padding: 1rem;
+	}
+}
+
+
+
+
+.depth{
+	width: 100vw;
+	height: 0;
+	background:green;
+	overflow: hidden;
+	position: absolute;
+	left:0;
+	top:64px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* transition: height 0.3s */
+}
 
 
 
