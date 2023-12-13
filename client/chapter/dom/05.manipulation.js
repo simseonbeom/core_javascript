@@ -53,15 +53,9 @@ document.body.insertAdjacentHTML('beforeend',template)
 
 
 
-function insertLast(node,text){
-
-  if(typeof node === 'string') node = getNode(node);
-
-  node.insertAdjacentHTML('beforeend',text)
-}
 
 
-insertLast('h1',template)
+// insertLast('h1',template)
 
 // - insertAdjacentElement
 // - insertAdjacentText
