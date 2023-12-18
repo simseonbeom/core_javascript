@@ -2,17 +2,12 @@
 
 ## 멋쟁이 사자처럼
 ---
-### 코어 자바스크립트 학습 저장소
+### 주접 생성기
 
 ---
 
-학습 주제별로 브랜치를 나눠 수업을 진행합니다.
-학습 자료는 해당 브랜치로 이동 후 확인할 수 있습니다.
 
-
-1. JavaScrirpt Core Brach [바로가기](https://github.com/simseonbeom/core_javascript/tree/01.core)
-2. JavaScrirpt Dom Brach [바로가기](https://github.com/simseonbeom/core_javascript/tree/02.dom)
-
+javascript Core와 DOM을 사용하여 간단한 애플리케이션 구현하기
 
 
 
