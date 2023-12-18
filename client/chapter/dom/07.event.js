@@ -111,15 +111,56 @@ ground.addEventListener('mousemove',debounce(()=>{
 // })
 
 
-function debounce(callback,limit = 100){
-  let timeout;
-  return function(...args){
-    clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      callback.apply(this,args)
-    }, limit);
+const obj = {
+  sayHi(){
+    
+    function sayBye(){
+      this
+    }
+
+    sayBye()
   }
 }
+
+
+// 사용할 수 있으면 ㅇ_ㅋ
+
+function debounce(callback,limit){
+
+  let timeout;
+
+  return function(e){
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      callback.call(this,e)
+    }, limit);
+  }
+  
+}
+
+ground.addEventListener('mousemove',debounce(()=>{
+  
+  console.log(this);
+}))
+
+// function f(e){
+//   console.log(e);
+// }
+
+// button.addEventListener('click',f);
+
+//  target.f()
+debounce()
+
+// function debounce(callback,limit = 100){
+//   let timeout;
+//   return function(...args){
+//     clearTimeout(timeout);
+//     timeout = setTimeout(() => {
+//       callback.apply(this,args)
+//     }, limit);
+//   }
+// }
 
 
 
@@ -168,13 +209,18 @@ function func(a,b){
   
 }
 
+// const a = func.bind({name:'이경화'},[10,100])  // 실행 x
+
+// 함수는 실행()
+// 함수 본문 =  another()
+
+
 
 // func.call('tiger',1,2)    // 실행
 // func.apply('tiger',[1,2]) // 실행
 
 // const a = func.bind('tiger',1,2) // 실행 시키지 않음.
 // button.addEventListener('click',a)
-
 
 
 
