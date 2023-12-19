@@ -1,5 +1,3 @@
-/* global gsap */
-
 
 import jujeobData from "./data/data.js";
 
@@ -19,11 +17,14 @@ import { getNode, getRandom, isNumericString, showAlert, shake, insertLast, clea
 
 const submit = getNode('#submit');
 const nameField = getNode('#nameField');
+const result = getNode('.result');
 
 
 function handleSubmit(e){
 
   e.preventDefault();
+
+ 
   const name = nameField.value;
   const list = jujeobData(name);
   const pick = jujeobData(name)[getRandom(list.length)]
@@ -42,15 +43,36 @@ function handleSubmit(e){
   }
   
 
-  clearContents('.result');
-  insertLast('.result',pick);
+  clearContents(result);
+  insertLast(result,pick);
   
 
 }
 
 
+function handleCopy(){
+   const text = result.textContent;
+   
+   navigator.clipboard.writeText(text)
+   showAlert('.alert-success','클립보드 복사 완료!!');
+}
 
-submit.addEventListener('click',handleSubmit)
+submit.addEventListener('click',handleSubmit);
+result.addEventListener('click',handleCopy);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
