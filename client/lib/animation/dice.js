@@ -17,7 +17,7 @@ export function diceAnimation (){
   random = gsap.utils.random([0,1,2,3,4,5]);
 
   function complete(){
-		attr(cube,'dice',random + 1)
+		attr(cube,'data-dice',random + 1)
   }
 
   const rotationValue = [

@@ -1,4 +1,7 @@
 
+import { typeError } from "../error/typeError.js";
+import { isString } from "../utils/typeOf.js";
+import { getNode } from "./getNode.js";
 
 // const attr = (function(){
 //   function getAttr(node,prop){
@@ -48,8 +51,8 @@ function getAttr(node,prop){
 
 function setAttr(node,prop,value){
   
-  if(typeof node === 'string') node = getNode(node);
-  if(typeof prop !== 'string' || typeof value !== 'string') throw new TypeError('setAttr함수의 두 번째 인수는 문자 타입 이어야 합니다.');
+  if(isString(node)) node = getNode(node);
+  if(!isString(prop)) typeError('setAttr함수의 두 번째 인수는 문자 타입 이어야 합니다.');
 
   if(value === ''){
     node.removeAttribute(prop);
