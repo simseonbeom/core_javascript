@@ -1,14 +1,25 @@
 import { getNode } from "./getNode.js";
 import { addClass, removeClass } from './css.js'
+import { isString } from "../utils/typeOf.js";
 
 
+/**
+ * 에러 메세지를 보여주는 함수
+ * @param {HTMLElement | string} node 
+ * @param {String} message 
+ * @param {Number} timeout 
+ * @returns void
+ */
+export function showAlert(node,message,timeout = 1000){
 
+  if(isString(node)){
+    node = getNode(node);
+  }
 
+  node.textContent = message;
 
-export function showAlert(){
-  getNode('.alert-error').textContent = '정확한 이름을 입력해 주세요.'
-  addClass('.alert-error','is-active');
+  addClass(node, 'is-active');
   setTimeout(() => {
-    removeClass('.alert-error','is-active');
-  }, 1500);
+    removeClass(node, 'is-active');
+  }, timeout);
 }

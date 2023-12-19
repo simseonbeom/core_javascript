@@ -1,6 +1,9 @@
+/* global gsap */
+
+
 import jujeobData from "./data/data.js";
 
-import { getNode, getRandom, showAlert } from './lib/index.js'
+import { getNode, getRandom, isNumericString, showAlert, shake, insertLast, clearContents } from './lib/index.js'
 
 // [phase-1]
 // 1. 주접 떨기 버튼을 클릭할 수 있는 핸들러를 연결해 주세요.
@@ -25,15 +28,23 @@ function handleSubmit(e){
   const list = jujeobData(name);
   const pick = jujeobData(name)[getRandom(list.length)]
   
-
-  if(!name || name.replace(/\s*/g,'' === '')){
-    console.log('error!');
-    
-    showAlert('.alert-error','이름이 없습니다!',1500)
-
-
+  
+  if(!name || name.replace(/\s*/g,'') === ''){
+    showAlert('.alert-error','이름을 입력해주세요',1500);
+    shake.restart()
+    return;
   }
 
+  if(!isNumericString(name)){
+    showAlert('.alert-error','제대로된 이름을 입력해주세요.',2000)
+    shake.restart()
+    return;
+  }
+  
+
+  clearContents('.result');
+  insertLast('.result',pick);
+  
 
 }
 

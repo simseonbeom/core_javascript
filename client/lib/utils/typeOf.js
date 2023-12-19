@@ -17,3 +17,22 @@ export const isSymbol = data => typeOf(data) === 'symbol';
 export const isNumber = data => typeOf(data) === 'number';
 export const isString = data => typeOf(data) === 'string';
 
+
+export function isNumericString(data){
+  return isNaN(Number(data))
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
