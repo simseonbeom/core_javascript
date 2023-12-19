@@ -1,7 +1,7 @@
 
 import jujeobData from "./data/data.js";
 
-import { getNode, getRandom, isNumericString, showAlert, shake, insertLast, clearContents } from './lib/index.js'
+import { getNode, getRandom, isNumericString, showAlert, shake, insertLast, clearContents, copy } from './lib/index.js'
 
 // [phase-1]
 // 1. 주접 떨기 버튼을 클릭할 수 있는 핸들러를 연결해 주세요.
@@ -24,7 +24,6 @@ function handleSubmit(e){
 
   e.preventDefault();
 
- 
   const name = nameField.value;
   const list = jujeobData(name);
   const pick = jujeobData(name)[getRandom(list.length)]
@@ -53,9 +52,14 @@ function handleSubmit(e){
 function handleCopy(){
    const text = result.textContent;
    
-   navigator.clipboard.writeText(text)
-   showAlert('.alert-success','클립보드 복사 완료!!');
+   if(nameField.value){
+    copy(text)
+    .then(()=>{
+       showAlert('.alert-success','클립보드 복사 완료!!');
+    })
+   }
 }
+
 
 submit.addEventListener('click',handleSubmit);
 result.addEventListener('click',handleCopy);
