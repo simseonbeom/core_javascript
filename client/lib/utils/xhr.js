@@ -97,7 +97,7 @@ xhr.put = (url,body,onSuccess,onFail) => {
   })
 }
 
-xhr.delete = (url,body,onSuccess,onFail) => {
+xhr.delete = (url,onSuccess,onFail) => {
   xhr({
     method:'DELETE',
     url,
@@ -106,15 +106,15 @@ xhr.delete = (url,body,onSuccess,onFail) => {
   })
 }
 
-xhr.get(
-  'https://jsonplaceholder.typicode.com/users',
-  (data)=>{
-    console.log( data );
-  },
-  (err)=>{
-    console.log( err );
-  }
-)
+// xhr.get(
+//   'https://jsonplaceholder.typicode.com/users',
+//   (data)=>{
+//     console.log( data );
+//   },
+//   (err)=>{
+//     console.log( err );
+//   }
+// )
 
 
 
