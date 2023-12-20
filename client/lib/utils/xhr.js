@@ -137,10 +137,9 @@ const defaultOptions = {
 }
 
 
-function xhrPromise(options){
+export function xhrPromise(options){
 
-
-  const {method,url,body,errorMessage} = {
+  const {method,url,body,errorMessage,headers} = {
     ...defaultOptions,
     ...options,
     headers:{
@@ -148,11 +147,13 @@ function xhrPromise(options){
       ...options.headers,
     }
   }
-
-
   const xhr = new XMLHttpRequest();
 
   xhr.open(method,url)
+
+  Object.entries(headers).forEach(([key,value])=>{
+    xhr.setRequestHeader(key,value);
+  })
 
   xhr.send(JSON.stringify(body))
 
@@ -170,16 +171,41 @@ function xhrPromise(options){
 }
 
 
-xhrPromise({
-  url:'https://jsonplaceholder.typicode.com/users'
-})
-.then((res)=>{
-  console.log( res );
-})
+// xhrPromise({
+//   url:'https://jsonplaceholder.typicode.com/users'
+// })
+// .then((res)=>{
+//   console.log( res );
+// })
 
 
-// xhrPromise().then()
 
+xhrPromise.get = (url)=>{
+  return xhrPromise({ url })
+}
+
+xhrPromise.post = (url,body) =>{
+  return xhrPromise({
+    url,
+    body,
+    method:'POST'
+  })
+}
+
+xhrPromise.put = (url,body) =>{
+  return xhrPromise({
+    url,
+    body,
+    method:'PUT'
+  })
+}
+
+xhrPromise.delete = (url) =>{
+  return xhrPromise({
+    url,
+    method:'DELETE'
+  })
+}
 
 
 
