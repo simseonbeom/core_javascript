@@ -1,5 +1,6 @@
 
 import { getNode } from '../dom/getNode.js'
+import { isNumber, isObject } from './typeOf.js'
 
 // 이상원, 박수양, 조윤주, 정현주, 박주현
 
@@ -41,11 +42,20 @@ const defaultOptions = {
   errorMessage:'알 수 없는 오류가 발생했습니다.'
 }
 
-function delayP(){
 
-  const config = {...defaultOptions}
+export function delayP(options){
 
-  const {shouldReject,timeout,data,errorMessage} = config;
+  let config = {...defaultOptions};
+  
+  if(isNumber(options)){
+    config.timeout = options;
+  }
+  
+  if(isObject(options)){
+    config = {...defaultOptions,...options}
+  }
+  
+  let {timeout,shouldReject,errorMessage,data} = config
 
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -59,7 +69,12 @@ function delayP(){
 }
 
 
-delayP()
+delayP(1000) // number | object
+
+
+// .then((res)=>{
+//   console.log( res );
+// })
 
 
 // .then((res)=>{

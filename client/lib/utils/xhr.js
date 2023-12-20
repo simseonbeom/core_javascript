@@ -120,6 +120,93 @@ xhr.delete = (url,onSuccess,onFail) => {
 
 
 
+/* -------------------------------------------- */
+/*                XHR Promise API               */
+/* -------------------------------------------- */
+
+
+const defaultOptions = {
+  method: 'GET',
+  url: '',
+  body:null,
+  errorMessage:'서버와의 통신이 원활하지 않습니다.',
+  headers:{
+    'Content-Type':'application/json',
+    'Access-Control-Allow-Origin':'*'
+  }
+}
+
+
+function xhrPromise(options){
+
+
+  const {method,url,body,errorMessage} = {
+    ...defaultOptions,
+    ...options,
+    headers:{
+      ...defaultOptions.headers,
+      ...options.headers,
+    }
+  }
+
+
+  const xhr = new XMLHttpRequest();
+
+  xhr.open(method,url)
+
+  xhr.send(JSON.stringify(body))
+
+  return new Promise((resolve, reject) => {
+    xhr.addEventListener('readystatechange',()=>{
+      if(xhr.readyState === 4){
+        if(xhr.status >= 200 && xhr.status < 400){
+          resolve(JSON.parse(xhr.response))
+        }else{
+          reject({message:errorMessage})
+        }
+      }
+    })
+  })
+}
+
+
+xhrPromise({
+  url:'https://jsonplaceholder.typicode.com/users'
+})
+.then((res)=>{
+  console.log( res );
+})
+
+
+// xhrPromise().then()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
