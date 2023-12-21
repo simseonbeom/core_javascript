@@ -108,21 +108,23 @@ function handleCancel(e){
 
 
 function handleDone(e){
-  e.stopPropagation()
+  e.preventDefault() // html 태그의 기본 동작을 차단 
   
   const name = $('#nameField').value;
   const email = $('#emailField').value;
   const website = $('#siteField').value;
 
-  const obj = {
-    name:name,
-    email:email,
-    website:website
-  }
+  const obj = { name, email, website }
 
-  tiger.post(END_POINT,)
 
+  tiger.post(END_POINT,obj).then(()=>{
+    clearContents(userCardInner)
+    renderUserList()
+    gsap.to('.pop',{autoAlpha:0})
+
+  })
 }
+
 
 createButton.addEventListener('click',handleCreate)
 cancelButton.addEventListener('click',handleCancel)
