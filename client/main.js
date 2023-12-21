@@ -1,12 +1,13 @@
-
+/* global gsap */
 
 
 import { 
   tiger,
   insertLast,
+  changeColor,
   getNode as $,
+  renderUserCard,
 } from "./lib/index.js";
-
 
 
 const END_POINT = 'https://jsonplaceholder.typicode.com/users'
@@ -23,17 +24,23 @@ const userCardInner = $('.user-card-inner')
 
 async function renderUserList(){
 
-  const response = await tiger.get(END_POINT);
-  const userData = response.data;
+  try{
 
-  userData.forEach((item)=>{
+    const response = await tiger.get(END_POINT);
+    const userData = response.data;
 
+    userData.forEach(data => renderUserCard(userCardInner,data))
+    changeColor('.user-card');
 
-    item.name
-    
-    insertLast('.user-card-inner',item.name)
-
-  })
+    gsap.from('.user-card',{
+      x:100,
+      opacity:0,
+      stagger:0.1
+    })
+  }
+  catch(err){
+    console.log(err);
+  }
 
 }
 
