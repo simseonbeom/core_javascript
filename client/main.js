@@ -10,10 +10,11 @@ import {
   renderSpinner,
   renderUserCard,
   renderEmptyCard,
+  clearContents,
 } from "./lib/index.js";
 
 
-const END_POINT = 'https://jsonplaceholder.typicode.com/users'
+const END_POINT = 'http://localhost:3000/users'
 
 
 // [phase-1]
@@ -71,8 +72,12 @@ function handleDelete(e){
   const id = article.dataset.index.slice(5) ;
 
   
-  tiger.delete(`${END_POINT}/${id}`)
+  tiger.delete(`${END_POINT}/${id}`).then(()=>{
 
+    clearContents(userCardInner)
+    renderUserList()
+
+  })
 
 
 }
@@ -84,8 +89,44 @@ userCardInner.addEventListener('click',handleDelete)
 
 
 
+const createButton = $('.create');
+const cancelButton = $('.cancel');
+const doneButton = $('.done');
 
 
+
+function handleCreate(){
+
+  gsap.to('.pop',{autoAlpha:1})
+}
+
+
+function handleCancel(e){
+  e.stopPropagation()
+  gsap.to('.pop',{autoAlpha:0})
+}
+
+
+function handleDone(e){
+  e.stopPropagation()
+  
+  const name = $('#nameField').value;
+  const email = $('#emailField').value;
+  const website = $('#siteField').value;
+
+  const obj = {
+    name:name,
+    email:email,
+    website:website
+  }
+
+  tiger.post(END_POINT,)
+
+}
+
+createButton.addEventListener('click',handleCreate)
+cancelButton.addEventListener('click',handleCancel)
+doneButton.addEventListener('click',handleDone)
 
 
 

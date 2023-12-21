@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "live-server client --host=localhost --port=5500 --no-browser",
-    "serve": "json-server server/data/data.json",
+    "serve": "json-server server/data/data.json --watch",
     "all":"run-p dev serve"
   },
   "keywords": [],
