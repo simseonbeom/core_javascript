@@ -16,7 +16,7 @@ const defaultOptions = {
 
 
 
-const tiger = async (options) =>{
+export const tiger = async (options) =>{
 
   const {url,...restOptions} = {
     ...defaultOptions,
@@ -29,6 +29,7 @@ const tiger = async (options) =>{
 
   const response = await fetch(url,restOptions);
 
+
   if(response.ok){
     response.data = await response.json();
   }
@@ -36,12 +37,8 @@ const tiger = async (options) =>{
 }
 
 
-const user = await tiger({ url:END_POINT, });
-
-
-console.log( user.data );
-
-
+// const user = await tiger({ url:END_POINT, });
+// console.log( user.data );
 
 
 
@@ -49,6 +46,80 @@ console.log( user.data );
 // tiger.post()
 // tiger.put()
 // tiger.delete()
+
+
+
+tiger.get = (url,options)=>{
+  return tiger({
+    url,
+    ...options
+  })
+}
+
+tiger.post = (url,body,options)=>{
+  return tiger({
+    method:'POST',
+    url,
+    body:JSON.stringify(body),
+    ...options
+  })
+}
+
+
+tiger.delete = (url,options)=>{
+  return tiger({
+    method:'DELETE',
+    url,
+    ...options
+  })
+}
+
+
+tiger.put = (url,body,options)=>{
+  return tiger({
+    method:'PUT',
+    url,
+    body:JSON.stringify(body),
+    ...options
+  })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// tiger.get('www.naver.com',{})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
