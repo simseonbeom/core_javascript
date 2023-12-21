@@ -3,10 +3,13 @@
 
 import { 
   tiger,
+  delayP,
   insertLast,
   changeColor,
   getNode as $,
+  renderSpinner,
   renderUserCard,
+  renderEmptyCard,
 } from "./lib/index.js";
 
 
@@ -24,7 +27,19 @@ const userCardInner = $('.user-card-inner')
 
 async function renderUserList(){
 
+  renderSpinner(userCardInner)
+  
   try{
+
+    await delayP(100)
+    
+    // $('.loadingSpinner').remove()
+    gsap.to('.loadingSpinner',{
+      opacity:0,
+      onComplete(){
+        $('.loadingSpinner').remove()
+      }
+    })
 
     const response = await tiger.get(END_POINT);
     const userData = response.data;
@@ -39,13 +54,31 @@ async function renderUserList(){
     })
   }
   catch(err){
-    console.log(err);
+    renderEmptyCard(userCardInner);
   }
 
 }
 
 
 renderUserList()
+
+
+function handleDelete(e){
+  const button = e.target.closest('button');
+  const article = e.target.closest('article');
+
+  if( !article || !button ) return;
+  const id = article.dataset.index.slice(5) ;
+
+  
+  tiger.delete(`${END_POINT}/${id}`)
+
+
+
+}
+
+userCardInner.addEventListener('click',handleDelete)
+
 
 
 
