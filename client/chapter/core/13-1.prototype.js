@@ -88,6 +88,8 @@ function Animal(){
 }
 
 
+const a = new Animal();
+
 function Tiger(name){
   Animal.call(this)
   this.name = name;
@@ -102,6 +104,8 @@ Tiger.bark = function(){
   return '어흥!'
 }
 
+
+// Tiger.prototype = a
 
 const 한라산호랑이 = new Tiger('포동이')
 const 금강산호랑이 = new Tiger()

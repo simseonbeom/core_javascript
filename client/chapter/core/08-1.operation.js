@@ -56,7 +56,10 @@ let coercionTypeConversion = '9' * '3';
 // 대부분의 연산자는 기본 값으로만 작동합니다.
 let onlyWorkDefaultValues = [1,2,3].concat([4,5,6]);
 
+//concatenate 
+
 console.log( onlyWorkDefaultValues );
+
 
 
 let first = [1,2,3];

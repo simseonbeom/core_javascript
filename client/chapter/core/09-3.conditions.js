@@ -74,7 +74,7 @@ if (thisTime === MORNING) {
 // 5 : 금
 // 6 : 토
 
-// 관심사의 분리 
+// 관심사의 분리  Separation of concerns
 
 // 함수는 하나의 기능만을 수행하는 것
 
@@ -128,3 +128,22 @@ const todayIs = weekend();
 console.log(todayIs);
 
 // 요일 뽑아내기   => weekend 월~금: 평일입니다. 토~일 : 주말입니다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

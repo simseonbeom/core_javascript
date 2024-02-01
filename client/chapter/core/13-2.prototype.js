@@ -134,6 +134,7 @@ const 한라산호랑이 = new Tiger('포동이')
 // control (이벤트)
 // 패턴
 
+
 class Todo {
 
   target = null;

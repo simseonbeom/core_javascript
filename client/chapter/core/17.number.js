@@ -71,7 +71,7 @@ let getRandomMinMax = (min,max)=>{
   if(min > max) {
     throw new Error('최솟값은 최댓값보다 작아야 합니다.')
   }
-  return Math.floor(Math.random() * (max-min) + min) 
+  return Math.round(Math.random() * (max-min) + min) 
 }
 
 

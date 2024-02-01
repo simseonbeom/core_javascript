@@ -247,23 +247,23 @@ let IIFE;
 // incapsulation (캡슐화)
 // 모듈화 => 모듈 프로그래밍 (import, export)
 
-// const MASTER = (function (g){
+const MASTER = (function (g){
 
 
-//   console.log( g.alert() );
-//   let uuid =  'askdjazxjd!@#!@$123';
+  console.log( g.alert() );
+  let uuid =  'askdjazxjd!@#!@$123';
 
 
-//   return {
-//     getKey(){
-//       return uuid
-//     },
-//     setKey(value){
-//       uuid = value
-//     }
-//   }
+  return {
+    getKey(){
+      return uuid
+    },
+    setKey(value){
+      uuid = value
+    }
+  }
 
-// })(window);
+})(window);
 
 
 
