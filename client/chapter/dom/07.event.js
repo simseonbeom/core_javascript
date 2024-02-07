@@ -69,27 +69,29 @@ function handleClickBall({offsetX:x,offsetY:y}){
 
   // const {offsetX:x,offsetY:y} = e;
   console.log(x, y);
-  ball.style.transform = `translate(${x - (ball.offsetWidth / 2)}px,${y - (ball.offsetHeight / 2)}px)`
+  ball.style.transform = 
+  `translate(${x - (ball.offsetWidth / 2)}px,${y - (ball.offsetHeight / 2)}px)`
 }
+
 
 
 // ground.addEventListener('click',handleClickBall)
 
 // 몇초에 한번씩만 호출되도록, 마우스의 움직임이 끝나면 호출되도록
 
-// ground.addEventListener('mousemove',({offsetX:x,offsetY:y})=>{
+ground.addEventListener('mousemove',({offsetX:x,offsetY:y})=>{
 
-//   // console.log(x,y);
+  // console.log(x,y);
 
-//   let template = `
-//     <div class="emotion" style="top:${y}px;left:${x}px">😍</div>
-//   `
+  let template = `
+    <div class="emotion" style="top:${y}px;left:${x}px">😍</div>
+  `
 
-//   ground.insertAdjacentHTML('beforeend',template)
+  ground.insertAdjacentHTML('beforeend',template)
 
 
   
-// })
+})
 
 // ground.addEventListener('mousemove',debounce(({offsetX:x,offsetY:y})=>{
 //     let template = `

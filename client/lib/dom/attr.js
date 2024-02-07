@@ -37,6 +37,7 @@
 // })()
 
 
+
 function getAttr(node,prop){
 
   if(typeof node === 'string') node = getNode(node)
@@ -68,3 +69,24 @@ function setAttr(node,prop,value){
 }
 
 const attr = (node,prop,value) => value === undefined ? getAttr(node,prop) : setAttr(node,prop,value)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

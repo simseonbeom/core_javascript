@@ -7,13 +7,15 @@ const nav = document.querySelector('nav');
 
 const height = [100,200,300]
 
+const h = t => t.style.height = 0;
+
 list.forEach((li,i)=>{
   li.addEventListener('mouseenter',(e)=>{
     let currentDepth = e.target.lastElementChild;
-    // depth.forEach(item =>  item.style.height = 0)
+    // depth.forEach(h)
     gsap.set(depth,{height:0})
     // currentDepth.style.height = '100px'
-    gsap.to(currentDepth,{height:height[i],ease:'power3.inOut'})
+    gsap.to(currentDepth,{height:height[i],duration:0.2})
   })
 })
 
