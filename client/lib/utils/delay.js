@@ -220,6 +220,15 @@ async function getData(){
 
 
 
+const a = new Promise((a,b)=>{a('성공')});
+
+a.then((res)=>{
+  console.log( res );
+})
+
+
+
+
 
 
 
