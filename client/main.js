@@ -12,6 +12,7 @@ import { getNode, getRandom, isNumericString, showAlert, shake, insertLast, clea
 // [phase-2]
 // 1. 아무 값도 입력 받지 못했을 때 예외처리 (콘솔창 출력)
 // 2. 공백 문자를 받았을 때 예외처리 (콘솔창 출력)
+// 3. 숫자형 문자가 아닌 경우 (콘솔창 출력)
 
 
 
