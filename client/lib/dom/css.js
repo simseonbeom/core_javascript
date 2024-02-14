@@ -78,3 +78,40 @@ export const css = (node,prop,value)=> !value ? getCss(node,prop) : setCss(node,
 
 
 
+
+const h1 = document.querySelector('h1');
+const plus = document.querySelector('.plus');
+const minus = document.querySelector('.minus');
+
+
+
+function changeSize(){
+  let value = 0;
+
+  return function(){
+    let currentSize = parseInt(getComputedStyle(h1)['font-size']);
+
+    if(this.classList.contains('plus')){
+      if(value >= 10) return;
+      h1.style.fontSize = `${currentSize += 3}px`;
+      ++value
+    }else{
+      
+      if(value <= 0) return;
+      h1.style.fontSize = `${currentSize -= 3}px`;
+      --value
+    }
+  
+    console.log(value);
+  }
+
+  
+}
+
+plus?.addEventListener('click',changeSize())
+minus?.addEventListener('click',changeSize())
+
+
+
+
+

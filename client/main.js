@@ -83,3 +83,7 @@ function handleReset() {
 rollingButton.addEventListener("click", handleRollingDice);
 recordButton.addEventListener("click", handleRecord);
 resetButton.addEventListener("click", handleReset);
+
+
+
+
