@@ -205,6 +205,7 @@ async function getData(){
   insertLast(document.body,`<img src="${data.sprites['front_default']}" alt="독침붕" />`)
 
   console.log( data.sprites['front_default'] );
+  data.sprites.other.showdown['front_default']
 
 }
 
